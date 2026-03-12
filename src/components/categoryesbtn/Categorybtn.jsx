@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Categorybtn.css';
+import './categorybtn.css';
 import { IoChevronDownOutline } from 'react-icons/io5';
 
 const Categorybtn = ({categories}) => {
