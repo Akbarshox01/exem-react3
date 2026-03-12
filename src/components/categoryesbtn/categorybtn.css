@@ -1,0 +1,45 @@
+.category-container {
+  position: relative;
+  
+}
+
+.category-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 25px;
+}
+
+.dropdown-modal {
+  position: absolute;
+  top: 45px; 
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  width: 200px;
+  max-height: 300px;
+
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}

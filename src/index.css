@@ -1,0 +1,129 @@
+@media (max-width: 900px){
+.header{
+gap:10px;
+}
+
+.main-input{
+max-width:300px;
+}
+
+.header-right{
+gap:15px;
+}
+}
+
+@media (max-width: 600px){
+.header{
+flex-wrap:wrap;
+}
+
+.main-input{
+width:100%;
+order:3;
+}
+
+.header-right span{
+display:none;
+}
+
+.header-right{
+gap:10px;
+}
+}
+
+
+
+@media (max-width: 900px){
+.category-btns{
+flex-wrap:wrap;
+gap:10px;
+}
+
+.btn{
+font-size:14px;
+padding:8px 12px;
+}
+}
+
+@media (max-width: 600px){
+.category-btns{
+overflow-x:auto;
+white-space:nowrap;
+}
+
+.btn{
+font-size:13px;
+padding:7px 10px;
+}
+}
+
+
+@media (max-width: 900px){
+.banner{
+flex-direction:column;
+text-align:center;
+gap:20px;
+}
+
+.banner-img{
+width:250px;
+}
+}
+
+@media (max-width: 600px){
+.banner h2{
+font-size:22px;
+}
+
+.banner h4{
+font-size:14px;
+}
+
+.banner h5{
+font-size:16px;
+}
+
+.banner-img{
+width:200px;
+}
+}
+
+
+@media (max-width: 900px){
+.brands-btn{
+flex-wrap:wrap;
+gap:10px;
+justify-content:center;
+}
+
+.brandes-btn{
+padding:8px 14px;
+font-size:14px;
+}
+}
+
+@media (max-width: 600px){
+.brands-btn{
+overflow-x:auto;
+white-space:nowrap;
+gap:8px;
+
+}
+
+.brandes-btn{
+padding:7px 12px;
+font-size:13px;
+}
+}
+
+
+@media (max-width: 900px){
+    .topshop{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+

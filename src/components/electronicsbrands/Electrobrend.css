@@ -1,0 +1,63 @@
+.electro-wrapper{
+    padding: 20px 0;
+}
+
+.electroshop-preview{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.electrobtn{
+    color: white;
+    background-color: #FCBD01;
+    border-radius: 25px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.electroshop{
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.electroshoped{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #313131;
+    border-radius: 25px;
+    width: 400px;
+    height: 150px;
+    color: white;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.electroshoped:hover{
+    background-color: #F6DE8D;
+    color: black;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.electro-value{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.electro-icon{
+    font-size: 22px;
+}
+
+.electroshoped img{
+    width: 110px;
+    height: auto;
+}
