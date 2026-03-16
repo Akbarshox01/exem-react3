@@ -32,7 +32,10 @@ import gamepad from './assets/gamepad.png';
 import Footer from "./components/footer/Footer";
 import { Route, Routes } from "react-router-dom";
 import Unitdetales from "./pages/unitdetales/Unitdetales";
-
+import shim from './assets/jensi.png';
+import Zara from "./pages/zara/Zara";
+import Store from "./pages/store/Store";
+import { useState } from "react";
 
 
 
@@ -215,24 +218,166 @@ const categoriesData = [
 ];
 
 
-  const categories = [
-    "Computer & Laptop",
-    "Computer Accessories",
-    "SmartPhone",
-    "Headphone",
-    "Mobile Accessories",
-    "Gaming Console",
-    "Camera & Photo",
-    "TV & Homes Appliances",
-    "Watches & Accessories",
-    "GPS & Navigation",
-    "Wearable Technology"
-  ];
+const categories = [
+"Computer & Laptop",
+"Computer Accessories",
+"SmartPhone",
+"Headphone",
+"Mobile Accessories",
+"Gaming Console",
+"Camera & Photo",
+"TV & Home Appliances",
+"Watches & Accessories",
+"GPS & Navigation",
+"Wearable Technology"
+]
+
+  const reap= [
+   {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+
+
+  ]
+
+  const cards =[
+    {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+      {
+     img:shim,
+     name:'ZARA Suit Blazer Midnight Black Cotton',
+     p:'⭐⭐⭐⭐⭐',
+     s:'BUY NOW - ₹125'
+   },
+]
 
 const Home = () => {
+
+
+
   return (
     <div>
-<Header/> 
 <Categorybtn categories={categories} /> 
 <FirstBanner/> 
 <Brands /> 
@@ -249,18 +394,41 @@ const Home = () => {
 
 
 const App = () => {
+  const [store, setStore] = useState([])
+
+  const addToStore = (item) => {
+    setStore([...store, item])
+  }
+
   return (
     <div>
-      <Header/>  {/* Header hamma page da */}
+      <Header/>
+
       <Routes>
+
         <Route path="/" element={<Home />} />
-        <Route path="/unit" element={<Unitdetales category={categoriesData} />} />
+
+        <Route
+          path="/unit"
+          element={<Unitdetales category={categoriesData} />}
+        />
+
+        <Route
+          path="/zara"
+          element={<Zara reap={reap} addToStore={addToStore} />}
+        />
+
+        <Route
+          path="/store"
+          element={<Store store={cards} />}
+        />
+
       </Routes>
+
     </div>
   )
 }
 
-export default App;
-
+export default App
 
 

@@ -1,45 +1,132 @@
 .category-container {
   position: relative;
-  
 }
 
 .category-btns {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
+  gap: 12px;
+  padding: 12px 20px;
 }
 
 .btn {
-  padding: 10px 15px;
-  border: 1px solid #ccc;
-  background: white;
+  padding: 10px 16px;
+  border: none;
+  background: #f3f3f3;
   cursor: pointer;
+  font-size: 14px;
   display: flex;
   align-items: center;
-  gap: 5px;
-  border-radius: 25px;
+  gap: 6px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
-.dropdown-modal {
+.btn:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal {
   position: absolute;
-  top: 45px; 
-  left: 0;
-  background: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  width: 200px;
-  max-height: 300px;
-
+  top: 60px;
+  left: 20px;
+  width: 900px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  z-index: 100;
+  transition: all 0.3s ease;
 }
 
-.dropdown-item {
-  padding: 10px;
+.modal-content {
+  display: flex;
+}
+
+.close-btn {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  border: none;
+  background: #ff4d4d;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.dropdown-item:hover {
-  background-color: #f0f0f0;
+.close-btn:hover {
+  background: #e60000;
+}
+
+.modal-left {
+  width: 250px;
+  border-right: 1px solid #eee;
+  padding: 15px;
+}
+
+.modal-category {
+  padding: 10px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.modal-category:hover {
+  background: #f2f2f2;
+  transform: translateX(4px);
+}
+
+.modal-middle {
+  width: 350px;
+  padding: 15px;
+}
+
+.phone-card {
+  border: 1px solid #eee;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.phone-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.phone-card span {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.modal-right {
+  width: 250px;
+  background: #f7e8a4;
+  padding: 20px;
+  text-align: center;
+  border-radius: 0 12px 12px 0;
+}
+
+.modal-right h2 {
+  margin-bottom: 12px;
+}
+
+.modal-right button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff7f00;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.modal-right button:hover {
+  background: #e65c00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
